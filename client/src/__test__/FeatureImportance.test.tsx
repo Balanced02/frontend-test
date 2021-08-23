@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import FeatureImportance from '../components/FeatureImportance';
+import FeatureImportance from '../components/FeatureImportance/FeatureImportance';
 
 test('renders feature importance title', () => {
   render(<FeatureImportance data={[]} />);
