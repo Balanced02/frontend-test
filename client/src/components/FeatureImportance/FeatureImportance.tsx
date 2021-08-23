@@ -9,12 +9,12 @@ const FeatureImportance = ({ data }: FeatureImportanceProps) => <div className="
   <div className="row">
     <div className="col label-container">
       {data.map(dat =>
-        <p>{dat.key}</p>
+        <p key={dat.key} >{dat.key}</p>
       )}
     </div>
     <div className="col-8 progress-container">
       {data.map(dat =>
-        <div className="progress">
+        <div key={dat.key} className="progress">
           <div className="progress-bar progress-bar-striped" role="progressbar" style={{ width: `${dat.value}%` }}></div>
         </div>
       )}

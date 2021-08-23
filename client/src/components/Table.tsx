@@ -13,7 +13,7 @@ const Table = ({ tableColumns, data, title }: TableProps) => {
   const populateTableData = (data: DataProps): ReactNode => {
     let tableBody = []
     for (let key in data) {
-      let res = <tr>
+      let res = <tr key={key} >
         <td>{convertLanguage(key)}</td>
         <td>{convertLanguage(data[key])}</td>
       </tr>
@@ -28,7 +28,7 @@ const Table = ({ tableColumns, data, title }: TableProps) => {
       <thead >
         <tr>
           {tableColumns.map(title =>
-            <th scope="col">{title}</th>
+            <th scope="col" key={title} >{title}</th>
           )}
         </tr>
       </thead>
